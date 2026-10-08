@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f4eb">
+  <meta name="description" content="Modelo demonstrativo para espaço de estética com pacotes, preços e galeria de antes e depois.">
+  <title>Alva Estética — modelo demonstrativo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/logo-alva.svg">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+  <div class="demo-strip">
+    <span>Modelo demonstrativo</span>
+    <span>Textos, imagens e valores são ilustrativos</span>
+  </div>
+
+  <header class="site-header" data-header>
+    <div class="masthead container">
+      <div class="masthead-meta" aria-hidden="true">
+        <span>Cuiabá · MT</span>
+        <span>Estética &amp; autocuidado</span>
+      </div>
+
+      <a class="brand" href="#inicio" aria-label="Alva Estética — início">
+        <img src="assets/logo-alva.svg" width="50" height="50" alt="">
+        <span>
+          <strong>ALVA</strong>
+          <small>espaço de estética</small>
+        </span>
+      </a>
+
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu" data-menu-button>
+        <img class="menu-open-icon" src="assets/menu.svg" width="24" height="24" alt="">
+        <img class="menu-close-icon" src="assets/xmark.svg" width="24" height="24" alt="">
+      </button>
+
+      <nav class="nav-links" id="menu-principal" aria-label="Navegação principal" data-nav-links>
+        <a href="#pacotes">Pacotes</a>
+        <a href="#resultados">Antes &amp; depois</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#localizacao">Cuiabá</a>
+        <button class="nav-action" type="button" data-demo-action>Agendar avaliação</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy" data-hero-copy>
+          <p class="hero-kicker">Cuidado sem mistério</p>
+          <h1 id="hero-title">Cuidado bonito começa com escolhas claras.</h1>
+          <p class="hero-lede">Pacotes faciais e corporais com valores visíveis, explicados sem pressa e pensados a partir do que você realmente quer cuidar.</p>
+          <div class="hero-actions">
+            <a class="button" href="#pacotes">Ver pacotes</a>
+            <button class="text-action" type="button" data-demo-action>
+              Agendar avaliação
+              <img src="assets/arrow-right.svg" width="20" height="20" alt="">
+            </button>
+          </div>
+        </div>
+
+        <figure class="hero-visual" data-hero-visual>
+          <img src="assets/hero-estudio.webp" width="1672" height="941" alt="Profissional de estética conversa com cliente em um estúdio acolhedor" fetchpriority="high">
+          <figcaption>
+            <span>Avaliação cuidadosa</span>
+            <strong>Você entende cada escolha antes de começar.</strong>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="hero-index" aria-hidden="true">01</div>
+    </section>
+
+    <section class="clarity-section" aria-labelledby="clarity-title">
+      <div class="container clarity-grid">
+        <div class="clarity-copy" data-reveal>
+          <p class="section-label">Tudo em um só lugar</p>
+          <h2 id="clarity-title">Chega de procurar preço em destaque antigo.</h2>
+        </div>
+        <div class="clarity-ledger" data-reveal-group aria-label="O que você encontra nesta página">
+          <article>
+            <span>01</span>
+            <div><strong>Valor visível</strong><small>Sem “chame no direct”</small></div>
+          </article>
+          <article>
+            <span>02</span>
+            <div><strong>O que está incluso</strong><small>Antes de reservar</small></div>
+          </article>
+          <article>
+            <span>03</span>
+            <div><strong>Resultados ilustrados</strong><small>Com contexto e cuidado</small></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="packages-section" id="pacotes" aria-labelledby="packages-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <div>
+            <p class="section-label">Menu de cuidados</p>
+            <h2 id="packages-title">Escolha pelo que faz sentido para você.</h2>
+          </div>
+          <p>Valores demonstrativos para mostrar como um espaço de estética pode apresentar serviços com clareza, sem depender apenas do Instagram.</p>
+        </div>
+
+        <div class="package-filter" role="group" aria-label="Filtrar pacotes" data-package-filter>
+          <button type="button" aria-pressed="true" data-filter="todos">Todos</button>
+          <button type="button" aria-pressed="false" data-filter="face">Face</button>
+          <button type="button" aria-pressed="false" data-filter="corpo">Corpo</button>
+          <button type="button" aria-pressed="false" data-filter="olhar">Olhar</button>
+        </div>
+
+        <div class="package-table-wrap" data-reveal>
+          <table class="package-table">
+            <caption class="sr-only">Pacotes demonstrativos com categoria, duração, quantidade de encontros e preço</caption>
+            <thead>
+              <tr>
+                <th scope="col">Ritual</th>
+                <th scope="col">Categoria</th>
+                <th scope="col">Duração</th>
+                <th scope="col">Encontros</th>
+                <th scope="col">Investimento</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-package-row data-category="face">
+                <th scope="row"><strong>Ritual Essencial</strong><small>Limpeza, hidratação e finalização protetora</small></th>
+                <td data-label="Categoria">Face</td>
+                <td data-label="Duração">60 min</td>
+                <td data-label="Encontros">1</td>
+                <td data-label="Investimento"><strong>R$ 219</strong><small>à vista</small></td>
+              </tr>
+              <tr class="featured-row" data-package-row data-category="face">
+                <th scope="row"><strong>Ciclo Lumina</strong><small>Rotina facial em etapas, ajustada a cada encontro</small></th>
+                <td data-label="Categoria">Face</td>
+                <td data-label="Duração">75 min</td>
+                <td data-label="Encontros">4</td>
+                <td data-label="Investimento"><strong>R$ 760</strong><small>ou 4× de R$ 190</small></td>
+              </tr>
+              <tr data-package-row data-category="corpo">
+                <th scope="row"><strong>Corpo Leve</strong><small>Drenagem manual e ritual de conforto corporal</small></th>
+                <td data-label="Categoria">Corpo</td>
+                <td data-label="Duração">50 min</td>
+                <td data-label="Encontros">5</td>
+                <td data-label="Investimento"><strong>R$ 625</strong><small>ou 5× de R$ 125</small></td>
+              </tr>
+              <tr data-package-row data-category="olhar">
+                <th scope="row"><strong>Olhar Definido</strong><small>Design de sobrancelhas com acabamento natural</small></th>
+                <td data-label="Categoria">Olhar</td>
+                <td data-label="Duração">45 min</td>
+                <td data-label="Encontros">1</td>
+                <td data-label="Investimento"><strong>R$ 95</strong><small>à vista</small></td>
+              </tr>
+              <tr data-package-row data-category="face corpo">
+                <th scope="row"><strong>Dia Alva</strong><small>Ritual facial e corporal no mesmo dia</small></th>
+                <td data-label="Categoria">Combo</td>
+                <td data-label="Duração">120 min</td>
+                <td data-label="Encontros">1</td>
+                <td data-label="Investimento"><strong>R$ 349</strong><small>à vista</small></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="package-note" data-reveal>
+          <img src="assets/spark.svg" width="24" height="24" alt="">
+          <p><strong>Antes de reservar:</strong> a avaliação confirma o cuidado mais adequado para você. Valores, duração e número de encontros são ilustrativos neste modelo.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="comparison-section" id="resultados" aria-labelledby="comparison-title">
+      <div class="container">
+        <div class="comparison-heading" data-reveal>
+          <div>
+            <p class="section-label">Galeria interativa</p>
+            <h2 id="comparison-title">Veja a transformação lado a lado.</h2>
+          </div>
+          <p>Arraste a alça de cada imagem para comparar as mudanças simuladas na mesma cliente fictícia.</p>
+        </div>
+        <p class="comparison-disclaimer" id="comparison-ai-note" role="note"><strong>Imagens geradas por inteligência artificial.</strong> As clientes e os resultados são fictícios: estes comparativos ilustram possibilidades visuais, não mostram atendimentos reais nem garantem resultados.</p>
+
+        <div class="comparison-gallery" data-reveal-group>
+          <article class="comparison-card comparison-card-large" data-comparison style="--wipe: 58%;">
+            <div class="comparison-frame">
+              <div class="comparison-before">
+                <img src="assets/pele-antes-v2.webp" width="768" height="1024" alt="Cliente fictícia antes: pele com tom irregular, marcas e aspecto ressecado" loading="lazy">
+              </div>
+              <div class="comparison-after" aria-hidden="true">
+                <img src="assets/pele-depois-v2.webp" width="768" height="1024" alt="" loading="lazy">
+              </div>
+              <input class="comparison-control" type="range" min="15" max="85" value="58" aria-label="Comparar antes e depois da hidratação da pele" aria-describedby="comparison-ai-note" data-comparison-range>
+              <div class="comparison-divider" aria-hidden="true"><span></span></div>
+              <span class="comparison-tag tag-before">Antes</span>
+              <span class="comparison-tag tag-after">Depois</span>
+            </div>
+            <div class="comparison-meta">
+              <div><strong>Pele hidratada</strong><small>Ritual facial · simulação com IA</small></div>
+              <span class="comparison-hint">Arraste a alça central</span>
+            </div>
+          </article>
+
+          <article class="comparison-card" data-comparison style="--wipe: 52%;">
+            <div class="comparison-frame">
+              <div class="comparison-before">
+                <img src="assets/sobrancelhas-antes.webp" width="768" height="1024" alt="Cliente fictícia antes: sobrancelhas naturais com desenho menos definido" loading="lazy">
+              </div>
+              <div class="comparison-after" aria-hidden="true">
+                <img src="assets/sobrancelhas-depois-v2.webp" width="768" height="1024" alt="" loading="lazy">
+              </div>
+              <input class="comparison-control" type="range" min="15" max="85" value="52" aria-label="Comparar antes e depois do design de sobrancelhas" aria-describedby="comparison-ai-note" data-comparison-range>
+              <div class="comparison-divider" aria-hidden="true"><span></span></div>
+              <span class="comparison-tag tag-before">Antes</span>
+              <span class="comparison-tag tag-after">Depois</span>
+            </div>
+            <div class="comparison-meta">
+              <div><strong>Olhar definido</strong><small>Design natural · simulação com IA</small></div>
+              <span class="comparison-hint">Arraste a alça central</span>
+            </div>
+          </article>
+
+          <article class="comparison-card" data-comparison style="--wipe: 62%;">
+            <div class="comparison-frame">
+              <div class="comparison-before">
+                <img src="assets/labios-antes-v2.webp" width="768" height="1024" alt="Cliente fictícia antes: lábios com aspecto ressecado, sem alteração de volume" loading="lazy">
+              </div>
+              <div class="comparison-after" aria-hidden="true">
+                <img src="assets/labios-depois-v2.webp" width="768" height="1024" alt="" loading="lazy">
+              </div>
+              <input class="comparison-control" type="range" min="15" max="85" value="62" aria-label="Comparar antes e depois da hidratação labial" aria-describedby="comparison-ai-note" data-comparison-range>
+              <div class="comparison-divider" aria-hidden="true"><span></span></div>
+              <span class="comparison-tag tag-before">Antes</span>
+              <span class="comparison-tag tag-after">Depois</span>
+            </div>
+            <div class="comparison-meta">
+              <div><strong>Hidratação labial</strong><small>Sem volume · simulação com IA</small></div>
+              <span class="comparison-hint">Arraste a alça central</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="steps-section" id="como-funciona" aria-labelledby="steps-title">
+      <div class="container steps-grid">
+        <div class="steps-intro" data-reveal>
+          <p class="section-label">Do primeiro oi ao pós-cuidado</p>
+          <h2 id="steps-title">Um caminho simples, sem surpresa no final.</h2>
+          <button class="text-action" type="button" data-demo-action>
+            Conversar sobre meu cuidado
+            <img src="assets/arrow-right.svg" width="20" height="20" alt="">
+          </button>
+        </div>
+
+        <ol class="steps-list" data-reveal-group>
+          <li>
+            <span>01</span>
+            <img src="assets/chat-bubble.svg" width="30" height="30" alt="">
+            <div><strong>Conte o que você busca</strong><p>Uma conversa breve ajuda a entender sua rotina, preferências e expectativas.</p></div>
+          </li>
+          <li>
+            <span>02</span>
+            <img src="assets/calendar.svg" width="30" height="30" alt="">
+            <div><strong>Escolha o melhor formato</strong><p>Você confirma ritual, duração, investimento e horário antes de reservar.</p></div>
+          </li>
+          <li>
+            <span>03</span>
+            <img src="assets/leaf.svg" width="30" height="30" alt="">
+            <div><strong>Siga com leveza</strong><p>Ao final, você recebe orientações simples para prolongar o cuidado em casa.</p></div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="location-section" id="localizacao" aria-labelledby="location-title">
+      <div class="container location-grid">
+        <div class="location-copy" data-reveal>
+          <p class="section-label">Onde estamos</p>
+          <h2 id="location-title">Seu momento de cuidado começa em <mark>Cuiabá.</mark></h2>
+          <p>Atendimento presencial em Cuiabá, Mato Grosso. O endereço completo é compartilhado somente após a confirmação do agendamento.</p>
+          <button class="button button-accent" type="button" data-demo-action>Consultar disponibilidade</button>
+        </div>
+
+        <div class="location-visual" data-reveal aria-label="Área de atendimento em Cuiabá, Mato Grosso">
+          <svg viewBox="0 0 640 520" role="img" aria-labelledby="map-title map-desc">
+            <title id="map-title">Representação abstrata de Cuiabá</title>
+            <desc id="map-desc">Traços abstratos formam uma malha urbana decorativa ao redor de um marcador em Cuiabá.</desc>
+            <g class="map-lines" fill="none">
+              <path d="M-20 86C94 44 160 124 264 90s174-22 226 38 102 44 172 12"/>
+              <path d="M28 0c8 88 66 118 58 194s-70 126-38 216 12 122-8 154"/>
+              <path d="M170-20c-14 80 56 128 40 210s-90 104-62 196 100 92 96 154"/>
+              <path d="M376-30c-42 74-18 136 46 184s30 116-34 158-80 102-42 238"/>
+              <path d="M548-10c18 94-32 130-18 202s96 94 70 172-82 104-70 176"/>
+              <path d="M-30 254c112-24 184 48 272 18s150-78 238-26 122 56 190 28"/>
+              <path d="M-30 428c122 42 210-38 302-6s156 62 242 22 114-46 166-14"/>
+            </g>
+            <circle class="map-ring" cx="336" cy="274" r="86"/>
+            <circle class="map-ring map-ring-inner" cx="336" cy="274" r="48"/>
+          </svg>
+          <div class="location-marker" aria-hidden="true">
+            <img src="assets/map-pin.svg" width="34" height="34" alt="">
+          </div>
+          <div class="location-name"><small>Atendimento presencial</small><strong>Cuiabá · MT</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section" aria-labelledby="faq-title">
+      <div class="container faq-grid">
+        <div data-reveal>
+          <p class="section-label">Perguntas frequentes</p>
+          <h2 id="faq-title">O que vale saber antes de vir.</h2>
+        </div>
+        <div class="faq-list" data-reveal-group>
+          <details open>
+            <summary>Preciso escolher um pacote antes da avaliação?</summary>
+            <p>Não. Você pode chegar apenas com uma intenção de cuidado; a escolha final acontece depois da conversa inicial.</p>
+          </details>
+          <details>
+            <summary>Os valores são iguais para todas as pessoas?</summary>
+            <p>Neste protótipo, os valores servem como exemplo de transparência. Na versão real, cada condição comercial deve ser confirmada pelo espaço.</p>
+          </details>
+          <details>
+            <summary>Posso reservar só um encontro?</summary>
+            <p>Sim. O menu separa rituais avulsos de ciclos com vários encontros para deixar essa escolha fácil.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing-section" id="agenda" aria-labelledby="closing-title">
+      <div class="container closing-grid">
+        <div data-reveal>
+          <p class="section-label">Seu tempo de cuidado</p>
+          <h2 id="closing-title">Escolha com calma. Agende com clareza.</h2>
+        </div>
+        <div class="closing-card" data-reveal>
+          <img src="assets/droplet.svg" width="32" height="32" alt="">
+          <p>Na versão final, este botão abre o WhatsApp já com o pacote escolhido e uma mensagem pronta.</p>
+          <button class="button button-light" type="button" data-demo-action>Simular agendamento</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="sticky-cta" data-sticky-cta>
+    <span><strong>Encontrou seu ritual?</strong><small>A avaliação ajuda a confirmar a melhor escolha.</small></span>
+    <button type="button" data-demo-action>Agendar avaliação</button>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-masthead">
+      <div class="footer-brand">
+        <img src="assets/logo-alva.svg" width="56" height="56" alt="">
+        <strong>ALVA</strong>
+        <span>Espaço de estética</span>
+      </div>
+      <p>Uma presença digital feita para informar antes de vender — com preço, contexto e cuidado.</p>
+    </div>
+    <div class="container footer-base">
+      <span>Modelo demonstrativo · 2026</span>
+      <nav aria-label="Links do rodapé">
+        <a href="#pacotes">Pacotes</a>
+        <a href="#resultados">Galeria</a>
+        <a href="#localizacao">Cuiabá</a>
+        <a href="#inicio">Voltar ao topo</a>
+      </nav>
+    </div>
+  </footer>
+
+  <dialog class="demo-dialog" data-demo-dialog aria-labelledby="dialog-title">
+    <button class="dialog-close" type="button" aria-label="Fechar janela" data-dialog-close>
+      <img src="assets/xmark.svg" width="24" height="24" alt="">
+    </button>
+    <img src="assets/logo-alva.svg" width="54" height="54" alt="">
+    <p class="section-label">Interação demonstrativa</p>
+    <h2 id="dialog-title">O agendamento entra aqui.</h2>
+    <p>Na publicação, este ponto pode abrir o WhatsApp com uma mensagem pronta, um formulário ou uma agenda online.</p>
+    <button class="button" type="button" data-dialog-close>Entendi</button>
+  </dialog>
+</body>
+</html>
