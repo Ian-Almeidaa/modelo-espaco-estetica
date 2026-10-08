@@ -346,3 +346,10 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 @media (prefers-contrast: more) {
   .hero-visual figcaption, .comparison-tag { background: var(--color-bg); backdrop-filter: none; border-color: var(--color-text); }
 }
+/* Crédito discreto do Studio; a logo pode ser incluída dentro do link quando enviada. */
+.studio-credit { display: flex; justify-content: flex-end; padding-top: 12px; font-size: .75rem; line-height: 1.4; }
+.studio-credit a { display: inline-flex; flex-wrap: wrap; align-items: center; gap: .35em; min-height: 44px; margin: 0; color: inherit; font-size: inherit; font-weight: 400; text-decoration: none; }
+.studio-credit a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.studio-credit a:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+.studio-credit strong { font-weight: 700; }
+.studio-credit img { width: 22px; height: 22px; object-fit: contain; }
